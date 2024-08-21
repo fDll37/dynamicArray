@@ -1,10 +1,3 @@
-//
-//  DynamicArray.swift
-//  BasicStruct
-//
-//  Created by Данил Менделев on 19.08.2024.
-//
-
 import Foundation
 
 protocol DynamicArrayProtocol {
@@ -64,7 +57,7 @@ struct SingleArray<T>: DynamicArrayProtocol {
         }
         storage[index] = nil
         
-        for i in index..<maxSize - 1 {
+        for i in index ..< maxSize - 1 {
             storage[i] = storage[i + 1]
         }
         
